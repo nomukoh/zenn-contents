@@ -5,11 +5,11 @@
 ## 導入手順
 - フォルダ構成
     ```
-    artcles/
-            .devcontainer/
-                            devcontainer.json
-            zenn-contents/
-            qiita-contents/
+    articles/
+    ├─ .devcontainer/
+    │    └─ devcontainer.json  # コンテナ設定ファイル
+    ├─ zenn-contents/          # Zenn記事用ディレクトリ (Gitリポジトリ)
+    └─ qiita-contents/         # Qiita記事用ディレクトリ (Gitリポジトリ)
     ```
 
 -  `devcontainer.json`
@@ -29,11 +29,20 @@
             "donjayamanne.githistory"
         ]
         }
-    },
-    "postCreateCommand": "npm install -g zenn-cli @qiita/cli"
     }
     ```
 
-
 - `zenn-contents/` 内
-    [公式のセットアップ手順](https://zenn.dev/zenn/articles/install-zenn-cli)をそのまま実行．
+   1. 新規作成する場合
+   ```
+   cd zenn-contents
+   npm init --yes
+   npm install zenn-cli
+   npx zenn init
+   ```
+
+   2. GitHubからインストールした場合
+   ```
+   cd zenn-contents
+   npm install
+   ```
