@@ -4,12 +4,21 @@
 
 ## 基本的な手順
 
-- 記事の作成  
-  `$ npx zenn new:article`  
-  `$ npx zenn new:article --slug 記事のスラッグ --title タイトル --type idea --emoji ✨`
+- 記事の作成
 
-- プレビュー  
-  `$ npx zenn preview`
+  ```bash
+  npx zenn new:article
+  ```
+
+  ```bash
+  npx zenn new:article --slug 記事のスラッグ --title タイトル --type idea --emoji ✨
+  ```
+
+- プレビュー
+
+  ```bash
+  npx zenn preview
+  ```
 
 - 公開  
   記事を zenn.dev 上で公開するには`published`オプションが`true`になっていることを確認したうえで、ファイルをコミットし、Zenn と連携されている GitHub リポジトリにプッシュ
@@ -31,29 +40,29 @@
 - `devcontainer.json`
   ファイルを作成して `articles/` をVSCodeで開き，必要なパッケージ（`Dev Containers`）をインストールすれば完了．
 
-  ```
+  ```json
   {
-  "name": "Zenn & Qiita Writing Env",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:24",
-  "customizations": {
+    "name": "Zenn & Qiita Writing Env",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:24",
+    "customizations": {
       "vscode": {
-      "settings": {
+        "settings": {
           "terminal.integrated.defaultProfile.linux": "bash"
-      },
-      "extensions": [
+        },
+        "extensions": [
           "ms-vscode.live-server",
           "esbenp.prettier-vscode",
           "donjayamanne.githistory"
-      ]
+        ]
       }
-  }
+    }
   }
   ```
 
 - `zenn-contents/` 内
   1.  新規作成する場合
 
-  ```
+  ```bash
   cd zenn-contents
   npm init --yes
   npm install zenn-cli
@@ -62,7 +71,7 @@
 
   2.  GitHubからインストールした場合
 
-  ```
+  ```bash
   cd zenn-contents
   npm install
   ```
