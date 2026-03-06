@@ -4,6 +4,7 @@ emoji: "💻️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Python, MachineLearning, 強化学習, PyTorch, AI]
 published: false
+# ogp_image: "https://example.com/my-image.png"
 ---
 
 ## はじめに
@@ -21,7 +22,7 @@ published: false
 
 ## 強化学習の位置づけ
 
-![ベン図.png](https://qiita-image-store.s3.amazonaws.com/0/45617/015bd058-7ea0-e6a5-b9cb-36a4fb38e59c.png)
+![venn-diagram.png](/images/reinforcement-learning-basics/venn-diagram.png)
 
 まず、「AI」、「機械学習」、「強化学習」という言葉の関係を示しておこうと思います。
 
@@ -58,16 +59,16 @@ AIを実現する手法の一つが「機械学習」です。機械学習には
 
 エージェントは方策を基に行動を決定します。そして、エージェントの行動によって状態が変化します。この繰り返しによって、ロボットの歩行や盤面が変化していきます。
 
-![状態遷移.png](https://qiita-image-store.s3.amazonaws.com/0/45617/015bd058-7ea0-e6a5-b9cb-36a4fb38e59c.png)
+![state-transition.png](/images/reinforcement-learning-basics/state-transition.png)
 
 つまり、上に示した要素を定めることで、状態遷移のルールを定義することができます。
 
 ## 強化学習の迷路課題への適用
 ここでは、強化学習を迷路課題に適用することを考え、上述した要素の具体例を見てみたいと思います。
 
-![迷路.png](https://qiita-image-store.s3.amazonaws.com/0/45617/015bd058-7ea0-e6a5-b9cb-36a4fb38e59c.png)
+![maze.png](/images/reinforcement-learning-basics/maze.png)
 
-上の図に示すような迷路を考えます。緑丸がプレイヤーです。赤の線は壁を表し、左上（`S0`）から右下（`S8`）に向かいます。このような問題では、強化学習の各要素は次のように定められます。
+上の図に示すような迷路を考えます。橙丸がプレイヤーです。青の線は壁を表し、左上（`S0`）から右下（`S8`）に向かいます。このような問題では、強化学習の各要素は次のように定められます。
 
 | 要素 | 説明・具体例 |
 | :--- | :--- |
@@ -111,7 +112,7 @@ AIを実現する手法の一つが「機械学習」です。機械学習には
 #### 2.1.報酬と価値
 価値反復法における重要な概念として、「報酬」と「価値」があります。
 
-![迷路.png](https://qiita-image-store.s3.amazonaws.com/0/45617/015bd058-7ea0-e6a5-b9cb-36a4fb38e59c.png)
+![maze2.png](/images/reinforcement-learning-basics/maze2.png)
 
 | 用語 | 説明 |
 | :--- | :--- |
@@ -142,7 +143,7 @@ $Q\left(S_t,a_t\right)=R_{t+1}+\gamma\ast Q(S_{t+1},a_{t+1})$
 
 学習前にはランダムに与えられていた状態価値ですが、学習後にはスタートからゴールへの道筋ができていることがわかります。
 
-![状態価値の比較.png](https://qiita-image-store.s3.amazonaws.com/0/45617/015bd058-7ea0-e6a5-b9cb-36a4fb38e59c.png)
+![study.png](/images/reinforcement-learning-basics/study.png)
 
 価値反復法によって、迷路課題の最適経路を学習できました。
 
@@ -170,5 +171,5 @@ $Q\left(S_t,a_t\right)=R_{t+1}+\gamma\ast Q(S_{t+1},a_{t+1})$
 
 ---
 
-この記事は株式会社HIBARIのテックブログからの転載です。  
-元記事はこちら： [強化学習の基本概念とSarsaアルゴリズムを用いた迷路探索の実装](自社ブログの該当記事URL)
+この記事は株式会社Hibariのテックブログからの転載です。  
+元記事はこちら： [【AI入門】強化学習の基本概念とSarsaアルゴリズムを用いた迷路探索の実装](自社ブログの該当記事URL)
