@@ -3,7 +3,7 @@ title: "【AI入門】強化学習の基本概念とSarsaアルゴリズムを�
 emoji: "💻️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Python, MachineLearning, 強化学習, PyTorch, AI]
-published: false
+published: true
 # ogp_image: "https://example.com/my-image.png"
 ---
 
